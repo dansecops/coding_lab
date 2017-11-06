@@ -1,0 +1,2 @@
+Nov. 06, 2017 5:58:13 NACHM. assignment4.LogNotifier notify
+INFORMATION: INFO Test
