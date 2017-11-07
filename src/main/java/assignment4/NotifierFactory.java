@@ -1,39 +1,17 @@
 package assignment4;
 
-import java.util.Map;
-
 public class NotifierFactory {
 
-    enum NotifierType {EMAIL, FILE}
+    public static Notifier createEmailNotifier(String recipientEmail) {
+        return new MailNotifier(recipientEmail);
+    }
 
-    /**
-     * @param type
-     * @param
-     * @return
-     */
-    public static Notifier createNotifier(int type, String filePath) {
-        System.out.println(filePath);
-        switch (type) {
-            case 1: {
-                return new LogNotifier(filePath);
-            }
-            case 2:
-                return new MailNotifier();
-            default:
-                throw new RuntimeException("Notifier does not exist!");
-        }
-
-
+    public static Notifier createLogNotifier(String filePath) {
+        return new LogNotifier(filePath);
     }
 
 
-    //private String[] settings = new String[3];
-
-    /*
-    use getNotifier method to get object of type Notifier
-     */
 
 
 }
-
 

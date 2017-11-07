@@ -1,30 +1,30 @@
 package assignment4;
 
-import java.io.File;
-import java.util.Date;
-
 public class MailNotifier implements Notifier {
 
+    public static final String SUBJECT_PREFIX = "Notification about ";
+    private final String receiverEmail;
+    private final MailSender mailSender = new MailSender();
 
-    public MailNotifier() {
-
-    }
-
-
-    @Override
-    public boolean notify(int type, String message) {
-        return false;
+    public MailNotifier(String receiverEmail) {
+        this.receiverEmail = receiverEmail;
     }
 
     @Override
-    public String addTransmissionDate() {
-        return null;
-    }
+    public boolean notify(String message, MessageType messageType) {
 
+        boolean status = false;
 
+        if (!message.isEmpty()) {
+            String subject = SUBJECT_PREFIX + messageType.toString();
+            String body = messageType.toString() + " - " + message;
+            if ((mailSender.sendEmail(body, subject, receiverEmail))) {
+                status = true;
+            }
+        }
 
-    public void sendEmail(String message) {
-        System.out.println("Email sending successful!");
+        return status;
+
 
     }
 }

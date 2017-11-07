@@ -5,6 +5,7 @@ import java.io.IOException;
 
 class MagicSquareReaderWriterTest {
 
+
     void setUp() {
     }
 
