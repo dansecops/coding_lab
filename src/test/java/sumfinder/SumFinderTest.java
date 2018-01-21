@@ -29,6 +29,7 @@ public class SumFinderTest {
         Byte[] byteArray = {60, 100, 20};
         Short[] shortArray = {1, 2, 3};
 
+
         NumberSumFinder nsf = new NumberSumFinder();
 
         Byte byteResult = 120;
@@ -41,6 +42,11 @@ public class SumFinderTest {
         assertEquals(nsf.find_sums(50, shortArray), 0);
 
 
-
     }
+
+    @Test
+    public void testNumberSumFinde2r() {
+        System.out.println('A'+0);
+    }
+
 }
