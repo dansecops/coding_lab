@@ -13,7 +13,7 @@ public class FeedGeneratorTest {
 
     static String[] certificateValues;
 
-    Logger LOGGER = Logger.getLogger(FeedGeneratorTest.class.getName());
+    Logger LOGGER = Logger.getLogger(this.getClass().getName());
     //Validates
     //ISIN (string, 2 random uppercase alphabets + 9 random alphanumeric characters + 1 check digit)
     //Example isin: "APTY4YB3H83");
@@ -57,7 +57,45 @@ public class FeedGeneratorTest {
 
 
     @Test
-    public void name() {
+    public void checkBidAskPrice() {
+        try {
+            double bidPrice= Double.parseDouble(certificateValues[2]);
+            double askPrice = Double.parseDouble(certificateValues[4]);
+            boolean resultBidPrice = false;
+            boolean resultAskPrice = false;
+            LOGGER.info("Bid Price: " + bidPrice + "\nAsk Price: " + askPrice);
+
+            resultBidPrice = bidPrice >= 100.00 && bidPrice <= 200.00;
+            resultAskPrice = askPrice >= 100.00 && askPrice <= 200.00;
+
+            assertTrue("Bid price should be between 100.00 and 200.00, but was: " + bidPrice, resultBidPrice);
+            assertTrue("Ask price should be between 100.00 and 200.00, but was: " + askPrice, resultAskPrice);
+
+        } catch (NumberFormatException nfe) {
+            LOGGER.info("Bidprice and/or ask price don't seem to be of type double.");
+        }
+
+    }
+
+    @Test
+    public void checkBidAskSize() {
+        try {
+            int bidSize= Integer.parseInt(certificateValues[3]);
+            int askSize = Integer.parseInt(certificateValues[5]);
+            boolean resultBidSize = false;
+            boolean resultAskSize = false;
+            LOGGER.info("Bid Size: " + bidSize + "\tAsk Size: " + askSize);
+
+            resultBidSize = bidSize >= 1000 && bidSize <= 5000;
+            resultAskSize = askSize >= 1000 && askSize <= 10000;
+
+            assertTrue("Bid size should be between 1000 and 5000, but was: " + bidSize, resultBidSize);
+            assertTrue("Ask size should be between 1000 and 10000, but was: " + askSize, resultAskSize);
+
+        } catch (NumberFormatException nfe) {
+            LOGGER.info("Bid price and/or ask size don't seem to be of type integer.");
+        }
+
     }
 
     @Test
