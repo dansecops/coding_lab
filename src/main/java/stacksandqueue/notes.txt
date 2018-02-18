@@ -1,0 +1,53 @@
+
+4 B
+3 C
+2 b
+1 A
+
+
+Stacks
+>A > B > c
+
+
+< C < b < A
+
+func1(int c =7  ){
+a =1
+ func2( ){
+	tem=t
+  func3( ){
+
+ ...
+func5(){
+retunrn true
+}
+..
+  }
+
+
+ }
+
+b = a +c;
+
+}
+
+Stack(2m)
+
+ ...
+ >> Context(func4)
+ >> Context(func3)
+ >> Context(func2)
+ >> Context(func1())
+
+<< Context(func4)
+
+Queue
+> A > B > c
+
+< A < B < c
+
+PriorityQueues
+
+> A3 > N1> B3 > C2 > X1 >  Z3
+
+N1 < X1  < C2 < A3 < B3 < Z3
