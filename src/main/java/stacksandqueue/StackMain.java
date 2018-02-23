@@ -1,6 +1,6 @@
 package stacksandqueue;
 
-class Queue {
+class StackMain {
 
     public static void main(String[] args) {
         SimpleStack simpstack = new SimpleStack();
@@ -12,7 +12,15 @@ class Queue {
         System.out.println(simpstack.remove()); // b
         System.out.println(simpstack.remove()); // c
         System.out.println(simpstack.remove()); // d
-        System.out.println(simpstack.remove()); // Exception
+        try {
+
+            System.out.println(simpstack.remove()); // Exception
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+
 
 
         //PriorityQueue

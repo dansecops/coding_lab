@@ -1,8 +1,11 @@
 package stacksandqueue;
 
+import java.rmi.NoSuchObjectException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchObjectException {
+        /**
         SimpleStack simpstack = new SimpleStack();
         simpstack.add("A"); // .add("A", 3)
         simpstack.add("b");// .add("B", 2)
@@ -13,15 +16,26 @@ public class Main {
         System.out.println(simpstack.remove()); // c
         System.out.println(simpstack.remove()); // d
         System.out.println(simpstack.remove()); // Exception
+         */
+
+        PriorityQueue pq = new PriorityQueue();
+        pq.addElement("a", 1);
+        pq.addElement("b", 2);
+        pq.addElement("c", 3);
+        pq.addElement("d", 2);
 
 
         //PriorityQueue
   //No iterations over all alements !
-//        System.out.println(simpstack.remove()); // C
-//        System.out.println(simpstack.remove()); // B
-//        System.out.println(simpstack.remove()); // D
-//        System.out.println(simpstack.remove()); // A
-//        System.out.println(simpstack.remove()); // Exception
+        try {
+            System.out.println(pq.removeElement()); // C
+            System.out.println(pq.removeElement()); // B
+            System.out.println(pq.removeElement()); // D
+            System.out.println(pq.removeElement()); // A
+            System.out.println(pq.removeElement()); // Exception
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     /*
