@@ -1,4 +1,4 @@
-package assignment2;
+package codingsession2;
 
 public class Rational implements Comparable<Rational> {
 

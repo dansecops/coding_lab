@@ -1,6 +1,6 @@
 package array.sort;
 
-public class Main2 {
+public class Exercise1 {
 
     /**
      "Problem: Find matching pairs of objects in an array that add up to a certain value!

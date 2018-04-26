@@ -1,4 +1,4 @@
-package assignment4;
+package codingsession4;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.mail.EmailException;

@@ -1,7 +1,5 @@
-package assignment3;
+package codingsession3;
 
-
-import java.io.IOException;
 
 class MagicSquareReaderWriterTest {
 

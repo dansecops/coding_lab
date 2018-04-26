@@ -1,4 +1,4 @@
-package assignment4;
+package codingsession4;
 
 public class Test {
     public static void main(String[] args) {

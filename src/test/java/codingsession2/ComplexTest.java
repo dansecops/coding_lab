@@ -1,4 +1,4 @@
-package assignment2;
+package codingsession2;
 
 
 class ComplexTest {

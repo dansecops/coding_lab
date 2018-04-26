@@ -1,4 +1,4 @@
-package assignment4;
+package codingsession4;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;

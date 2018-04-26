@@ -1,4 +1,4 @@
-package assignment4;
+package codingsession4;
 
 public class MailNotifier implements Notifier {
 
